@@ -1,0 +1,31 @@
+\documentclass[12pt,letterpaper]{article}
+\usepackage{ifpdf}
+\usepackage{mla}
+\newenvironment{hangingpar}[1]
+  {\begin{list}
+          {}
+          {\setlength{\itemindent}{-#1}%%'
+           \setlength{\leftmargin}{#1}%%'
+           \setlength{\itemsep}{0pt}%%'
+           \setlength{\parsep}{\parskip}%%'
+           \setlength{\topsep}{\parskip}%%'
+           }
+    \setlength{\parindent}{-#1}%%
+    \item[]
+  }
+  {\end{list}}
+%\linespread{3}
+%\usepackage[doublespacing]{setspace}
+\begin{document}
+\begin{mla}{$author_firstname$}{$author_lastname$}{$instructor$}{$class$}{\today\\$extra_info$}{$title$}
+\openup 1em
+$body$
+\pagebreak
+\begin{center}
+Works Cited
+\end{center}
+\begin{hangingpar}{0.5in}
+$works_cited$
+\end{hangingpar}
+\end{mla}
+\end{document}
